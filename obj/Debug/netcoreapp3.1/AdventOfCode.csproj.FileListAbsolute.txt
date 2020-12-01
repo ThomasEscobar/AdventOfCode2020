@@ -1,0 +1,16 @@
+/Users/thomas/SourceCode/AdventOfCode/bin/Debug/netcoreapp3.1/AdventOfCode.deps.json
+/Users/thomas/SourceCode/AdventOfCode/bin/Debug/netcoreapp3.1/AdventOfCode.runtimeconfig.json
+/Users/thomas/SourceCode/AdventOfCode/bin/Debug/netcoreapp3.1/AdventOfCode.runtimeconfig.dev.json
+/Users/thomas/SourceCode/AdventOfCode/bin/Debug/netcoreapp3.1/AdventOfCode.dll
+/Users/thomas/SourceCode/AdventOfCode/bin/Debug/netcoreapp3.1/AdventOfCode.pdb
+/Users/thomas/SourceCode/AdventOfCode/bin/Debug/netcoreapp3.1/Serilog.dll
+/Users/thomas/SourceCode/AdventOfCode/bin/Debug/netcoreapp3.1/Serilog.Sinks.Console.dll
+/Users/thomas/SourceCode/AdventOfCode/bin/Debug/netcoreapp3.1/Serilog.Sinks.File.dll
+/Users/thomas/SourceCode/AdventOfCode/obj/Debug/netcoreapp3.1/AdventOfCode.csprojAssemblyReference.cache
+/Users/thomas/SourceCode/AdventOfCode/obj/Debug/netcoreapp3.1/AdventOfCode.AssemblyInfoInputs.cache
+/Users/thomas/SourceCode/AdventOfCode/obj/Debug/netcoreapp3.1/AdventOfCode.AssemblyInfo.cs
+/Users/thomas/SourceCode/AdventOfCode/obj/Debug/netcoreapp3.1/AdventOfCode.csproj.CoreCompileInputs.cache
+/Users/thomas/SourceCode/AdventOfCode/obj/Debug/netcoreapp3.1/AdventOfCode.csproj.CopyComplete
+/Users/thomas/SourceCode/AdventOfCode/obj/Debug/netcoreapp3.1/AdventOfCode.dll
+/Users/thomas/SourceCode/AdventOfCode/obj/Debug/netcoreapp3.1/AdventOfCode.pdb
+/Users/thomas/SourceCode/AdventOfCode/obj/Debug/netcoreapp3.1/AdventOfCode.genruntimeconfig.cache
