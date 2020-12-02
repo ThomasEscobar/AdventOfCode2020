@@ -1,10 +1,9 @@
 using System;
-using System.IO;
 using System.Linq;
+using System.Diagnostics;
 using System.Collections.Generic;
 using Serilog.Core;
 using AdventOfCode.ToolBox;
-using System.Diagnostics;
 
 namespace AdventOfCode.Day1
 {

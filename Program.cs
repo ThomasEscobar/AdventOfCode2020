@@ -1,6 +1,4 @@
-﻿using System;
-using AdventOfCode.Logging;
-using AdventOfCode.Day1;
+﻿using AdventOfCode.Logging;
 
 namespace AdventOfCode
 {
@@ -11,8 +9,11 @@ namespace AdventOfCode
             var logger = CustomLogging.Init("logfile.txt");
             logger.Information("Welcome to Thomas' Advent Of Code 2020 project !");
 
-            var day1Solver = new Solver("Day1/input.txt", logger);
-            day1Solver.Solve();
+            // Day 1
+            new Day1.Solver("Day1/input.txt", logger).Solve();
+
+            // Day 2
+            new Day2.Solver("Day2/input.txt", logger).Solve();
         }
     }
 }

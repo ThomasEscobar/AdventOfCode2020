@@ -1,13 +1,21 @@
-2020-12-02 18:04:15.091 +00:00 [INF] Welcome to Thomas' Advent Of Code 2020 project !
-2020-12-02 18:04:15.149 +00:00 [INF] === Day 1 ===
-2020-12-02 18:04:15.150 +00:00 [INF] PART 1 - Now adding the inputs together 2 by 2 to check if the sum is 2020
-2020-12-02 18:04:15.152 +00:00 [INF] Match found !
-2020-12-02 18:04:15.152 +00:00 [INF] 177 + 1843 = 2020
-2020-12-02 18:04:15.152 +00:00 [INF] 177 * 1843 = 326211
-2020-12-02 18:04:15.152 +00:00 [INF] (Part 1 took 2 ms)
-2020-12-02 18:04:15.153 +00:00 [INF] PART 2 - Now adding the inputs together 3 by 3 to check if the sum is 2020
-2020-12-02 18:04:15.215 +00:00 [INF] Match found !
-2020-12-02 18:04:15.215 +00:00 [INF] 1297 + 533 + 190 = 2020
-2020-12-02 18:04:15.215 +00:00 [INF] 1297 * 533 * 190 = 131347190
-2020-12-02 18:04:15.215 +00:00 [INF] (Part 2 took 62 ms)
-2020-12-02 18:04:15.215 +00:00 [INF] =============
+2020-12-02 18:51:29.101 +00:00 [INF] Welcome to Thomas' Advent Of Code 2020 project !
+2020-12-02 18:51:29.146 +00:00 [INF] === Day 1 ===
+2020-12-02 18:51:29.147 +00:00 [INF] PART 1 - Now adding the inputs together 2 by 2 to check if the sum is 2020
+2020-12-02 18:51:29.148 +00:00 [INF] Match found !
+2020-12-02 18:51:29.148 +00:00 [INF] 177 + 1843 = 2020
+2020-12-02 18:51:29.148 +00:00 [INF] 177 * 1843 = 326211
+2020-12-02 18:51:29.148 +00:00 [INF] (Part 1 took 2 ms)
+2020-12-02 18:51:29.149 +00:00 [INF] PART 2 - Now adding the inputs together 3 by 3 to check if the sum is 2020
+2020-12-02 18:51:29.204 +00:00 [INF] Match found !
+2020-12-02 18:51:29.204 +00:00 [INF] 1297 + 533 + 190 = 2020
+2020-12-02 18:51:29.204 +00:00 [INF] 1297 * 533 * 190 = 131347190
+2020-12-02 18:51:29.204 +00:00 [INF] (Part 2 took 55 ms)
+2020-12-02 18:51:29.204 +00:00 [INF] =============
+2020-12-02 18:51:29.205 +00:00 [INF] === Day 2 ===
+2020-12-02 18:51:29.205 +00:00 [INF] PART 1 - Counting the number of passwords that are valid, based on their associated password policy
+2020-12-02 18:51:29.206 +00:00 [INF] There are 414 valid passwords !
+2020-12-02 18:51:29.207 +00:00 [INF] (Part 1 took 1 ms)
+2020-12-02 18:51:29.207 +00:00 [INF] PART 2 - Counting the number of passwords that are valid, based on the "revised" password policy
+2020-12-02 18:51:29.208 +00:00 [INF] There are 413 valid passwords !
+2020-12-02 18:51:29.208 +00:00 [INF] (Part 2 took 1 ms)
+2020-12-02 18:51:29.208 +00:00 [INF] =============

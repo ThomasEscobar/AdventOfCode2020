@@ -31,5 +31,17 @@ namespace AdventOfCode.ToolBox
 
             return list;
         }
+
+        public static List<string> GetStringListFromInput(string inputFilePath = null)
+        {
+            if (!File.Exists(inputFilePath))
+            {
+                throw (new Exception($"Error trying to open the input file: file doesn't exist. Path: {inputFilePath}"));
+            }
+
+            var list = new List<string>();
+            list.AddRange(File.ReadAllLines(inputFilePath));
+            return list;
+        }
     }
 }
