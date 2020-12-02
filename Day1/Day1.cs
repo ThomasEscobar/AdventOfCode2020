@@ -3,6 +3,8 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using Serilog.Core;
+using AdventOfCode.ToolBox;
+using System.Diagnostics;
 
 namespace AdventOfCode.Day1
 {
@@ -15,12 +17,7 @@ namespace AdventOfCode.Day1
             this.logger = logger;
             try
             {
-                var inputLines = File.ReadAllLines(inputFilePath);
-                this.input = new List<int>();
-                foreach (var line in inputLines)
-                {
-                    this.input.Add(Int32.Parse(line));
-                }
+                this.input = ToolBoxClass.GetNumberListFromInput(inputFilePath);
             }
             catch (Exception e)
             {
@@ -29,77 +26,65 @@ namespace AdventOfCode.Day1
             }
         }
 
-        public string Solve()
+        public void Solve()
         {
-            var answer = string.Empty;
-            this.LogStart(1);
+            logger.Information($"=== Day 1 ===");
 
+            var sw = new Stopwatch();
+            sw.Start();
+
+            this.SolvePart1();
+            logger.Information($"(Part 1 took {sw.ElapsedMilliseconds} ms)");
+
+            sw.Restart();
+
+            this.SolvePart2();
+            logger.Information($"(Part 2 took {sw.ElapsedMilliseconds} ms)");
+
+            logger.Information("=============");
+        }
+
+        public void SolvePart1()
+        {
             logger.Information("PART 1 - Now adding the inputs together 2 by 2 to check if the sum is 2020");
-            var matchFound = false;
             foreach (var num in this.input)
             {
-                if (!matchFound)
+                foreach (var otherNum in this.input.Where(n => !n.Equals(num)))
                 {
-                    foreach (var otherNum in this.input.Where(n => !n.Equals(num)))
+                    var sum = num + otherNum;
+                    if (sum == 2020)
                     {
-                        var sum = num + otherNum;
-                        if (sum == 2020)
-                        {
-                            logger.Information($"{num} + {otherNum} = {sum}");
-                            logger.Information("Match found !");
-                            matchFound = true;
-                            var multiplication = num * otherNum;
-                            logger.Information($"{num} * {otherNum} = {multiplication}");
-                            answer = multiplication.ToString();
-                            break;
-                        }
+                        logger.Information("Match found !");
+                        logger.Information($"{num} + {otherNum} = {sum}");
+                        logger.Information($"{num} * {otherNum} = {num * otherNum}");
+                        return;
                     }
                 }
             }
+            logger.Information("Match not found... Something went wrong !");
+        }
 
+        public void SolvePart2()
+        {
             logger.Information("PART 2 - Now adding the inputs together 3 by 3 to check if the sum is 2020");
-            matchFound = false;
             foreach (var num1 in this.input)
             {
-                if (!matchFound)
+                foreach (var num2 in this.input.Where(n => !n.Equals(num1)))
                 {
-                    foreach (var num2 in this.input.Where(n => !n.Equals(num1)))
+                    foreach (var num3 in this.input.Where(n => !n.Equals(num1) && !n.Equals(num2)))
                     {
-                        if (!matchFound)
+                        var sum = num1 + num2 + num3;
+                        if (sum == 2020)
                         {
-                            foreach (var num3 in this.input.Where(n => !n.Equals(num1) && !n.Equals(num2)))
-                            {
-                                var sum = num1 + num2 + num3;
-                                if (sum == 2020)
-                                {
-                                    logger.Information($"{num1} + {num2} + {num3} = {sum}");
-                                    logger.Information("Match found !");
-                                    matchFound = true;
-                                    var multiplication = num1 * num2 * num3;
-                                    logger.Information($"{num1} * {num2} * {num3} = {multiplication}");
-                                    answer = multiplication.ToString();
-                                    break;
-                                }
-                            }
+                            logger.Information("Match found !");
+                            logger.Information($"{num1} + {num2} + {num3} = {sum}");
+                            logger.Information($"{num1} * {num2} * {num3} = {num1 * num2 * num3}");
+                            return;
                         }
                     }
                 }
             }
-
-            this.LogEnd(answer);
-            return answer;
-        }
-
-        public void LogStart(int dayIndex)
-        {
-            logger.Information($"=== Day {dayIndex} ===");
-            logger.Information("Start...");
-        }
-
-        public void LogEnd(string answer)
-        {
-            logger.Information($"End ! Answer is {answer}");
-            logger.Information("=============");
+            logger.Information("Match not found... Something went wrong !");
         }
     }
 }
