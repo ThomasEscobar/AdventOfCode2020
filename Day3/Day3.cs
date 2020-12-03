@@ -70,7 +70,7 @@ namespace AdventOfCode.Day3
                 output.Add(new string(squares));
             }
 
-            logger.Information($"The tobbogan hit {treeCounter} trees on the way down !");
+            logger.Information($"The number of trees encountered is: {treeCounter}");
             File.WriteAllLines("Day3/output.txt", output);
         }
 
@@ -80,15 +80,14 @@ namespace AdventOfCode.Day3
 
             var width = this.input.FirstOrDefault().Length;
             var length = this.input.Count;
-            var slopeList = new List<KeyValuePair<int, int>>();
-            slopeList.Add(new KeyValuePair<int, int>(1, 1));
-            slopeList.Add(new KeyValuePair<int, int>(3, 1));
-            slopeList.Add(new KeyValuePair<int, int>(5, 1));
-            slopeList.Add(new KeyValuePair<int, int>(7, 1));
-            slopeList.Add(new KeyValuePair<int, int>(1, 2));
-            double total = 1;
 
-            int i = 1;
+            var slopeList = new List<int[]>();
+            slopeList.Add(new int[] { 1, 1 });
+            slopeList.Add(new int[] { 3, 1 });
+            slopeList.Add(new int[] { 5, 1 });
+            slopeList.Add(new int[] { 7, 1 });
+            slopeList.Add(new int[] { 1, 2 });
+            double total = 1;
 
             foreach (var slope in slopeList)
             {
@@ -97,9 +96,9 @@ namespace AdventOfCode.Day3
                 for (int y = 0; y < length; y++)
                 {
                     var line = this.input[y];
-                    var x = (y * slope.Key / slope.Value) % width;
+                    var x = (y * slope[0] / slope[1]) % width;
                     var squares = line.ToCharArray();
-                    if (y % slope.Value == 0)
+                    if (y % slope[1] == 0)
                     {
                         if (squares[x] == '#')
                         {
@@ -113,10 +112,9 @@ namespace AdventOfCode.Day3
                     }
                     output.Add(new string(squares));
                 }
-                logger.Information($"For the slope ({slope.Key},{slope.Value}), the number of trees encountered is: {treeCounter}");
+                logger.Information($"For the slope ({slope[0]},{slope[1]}), the number of trees encountered is: {treeCounter}");
                 total = total * treeCounter;
-                File.WriteAllLines($"Day3/output_slope{slope.Key}-{slope.Value}.txt", output);
-                i++;
+                File.WriteAllLines($"Day3/output_slope{slope[0]}-{slope[1]}.txt", output);
             }
 
             logger.Information($"The total is {total}");
