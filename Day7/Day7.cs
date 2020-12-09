@@ -66,7 +66,7 @@ namespace AdventOfCode.Day7
 
         private void SolvePart2()
         {
-            logger.Information("PART 2 - Calculating the sum of the questions EVERYONE answered yes for all groups");
+            logger.Information("PART 2 - Calculating the number of bags inside the shiny gold bag");
 
             var shinyBag = new BagModel("shiny gold");
 
