@@ -16,7 +16,7 @@ namespace AdventOfCode.Day1
             this.logger = logger;
             try
             {
-                this.input = ToolBoxClass.GetNumberListFromInput(inputFilePath);
+                this.input = ToolBoxClass.GetIntListFromInput(inputFilePath);
             }
             catch (Exception e)
             {

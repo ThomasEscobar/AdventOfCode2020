@@ -32,6 +32,9 @@ namespace AdventOfCode
 
             // Day8
             new Day8.Solver("Day8/input.txt", logger).Solve();
+
+            // Day9
+            new Day9.Solver("Day9/input.txt", logger).Solve();
         }
     }
 }
