@@ -154,12 +154,6 @@ namespace AdventOfCode.Day16
                         rule.positionsValidated.Add(i);
                     }
                 }
-
-                logger.Debug($"Rule {rule.ruleName} validates the positions:");
-                foreach (var pos in rule.positionsValidated)
-                {
-                    logger.Debug($"- {pos}");
-                }
             }
 
             // Create ordered list of rules
@@ -182,14 +176,13 @@ namespace AdventOfCode.Day16
             // Go through the dictionary by ascending position 
             foreach (var position in dictionaryIndexRule.Keys.OrderBy(k => k))
             {
-                logger.Debug($"{position} - {dictionaryIndexRule[position].ruleName}");
                 if (dictionaryIndexRule[position].ruleName.Contains("departure"))
                 {
                     product *= this.yourTicket.numberList[position];
                 }
             }
 
-            logger.Debug($"The product of the 6 fields that contain \"departure\" for your ticket is {product}");
+            logger.Information($"The product of the 6 fields that contain \"departure\" for your ticket is {product}");
         }
     }
 }
